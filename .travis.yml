@@ -3,4 +3,4 @@ services:
   - docker
 
 script:
-  - docker build -t
+  - docker build -t example .
