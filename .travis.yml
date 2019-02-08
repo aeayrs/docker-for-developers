@@ -3,4 +3,4 @@ services:
   - docker
 
 script:
-  - docker build -r react-app .
+  - docker build -t react-app .
