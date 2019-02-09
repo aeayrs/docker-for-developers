@@ -3,4 +3,14 @@ services:
   - docker
 
 script:
-  - docker build -t example .
+  - docker build -t aeayrs/dfd-react-example .
+  - docker images aeayrs/dfd-react-example
+
+before_deploy:
+  - docker login -u aeayrs -p ZtYz56EihJ@
+
+deploy:
+  provider: script
+  script: docker push aeayrs/dfd-react-example
+  on:
+    branch: master
